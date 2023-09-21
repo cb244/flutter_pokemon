@@ -34,7 +34,19 @@ class PokeDetail extends StatelessWidget {
                   ),
                   const Spacer(),
                   Stack(
+                    alignment: Alignment.bottomCenter,
                     children: [
+                      Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: Container(
+                          height: 280,
+                          width: 280,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(180),
+                            color: Colors.white.withOpacity(.5),
+                          ),
+                        ),
+                      ),
                       Container(
                         padding: const EdgeInsets.all(32),
                         child: Hero(
