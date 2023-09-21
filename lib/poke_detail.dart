@@ -53,8 +53,8 @@ class PokeDetail extends StatelessWidget {
                           tag: poke.name,
                           child: Image.network(
                             poke.imageUrl,
-                            height: 100,
-                            width: 100,
+                            height: 250,
+                            width: 250,
                           ),
                         ),
                       ),
