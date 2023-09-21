@@ -58,20 +58,30 @@ class PokeDetail extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Container(
-                        padding: const EdgeInsets.all(8),
-                        child: Text(
-                          'No.${poke.id}',
-                          style: const TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.bold),
-                        ),
-                      ),
                     ],
                   ),
-                  Text(
-                    poke.name,
-                    style: const TextStyle(
-                        fontSize: 36, fontWeight: FontWeight.bold),
+                  Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(90),
+                      color: Colors.white.withOpacity(.5),
+                    ),
+                    child: Text(
+                      '#${poke.id.toString().padLeft(3, '0')}',
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    child: Text(
+                      '${poke.name.substring(0, 1).toUpperCase()}${poke.name.substring(1)}',
+                      style: const TextStyle(
+                          fontSize: 36, fontWeight: FontWeight.bold),
+                    ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
